@@ -1,12 +1,14 @@
-package sk.tera;
+package sk.tera.db.Entity;
 
-import sk.tera.DAO.GroupDAO;
+import sk.tera.db.DAO.GroupDAO;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 /**
- * Created by leaflock on 4.3.2016.
+ * Entity which represent table T_GROUP.
+ *
+ * @author z0rk1
  */
 @Entity
 @Table(name = GroupDAO.TABLE_NAME)

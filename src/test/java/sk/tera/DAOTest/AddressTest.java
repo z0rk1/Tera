@@ -1,6 +1,5 @@
 package sk.tera.DAOTest;
 
-import jdk.nashorn.internal.runtime.ECMAException;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -8,15 +7,16 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.runners.MockitoJUnitRunner;
-import sk.tera.Address;
-import sk.tera.DAO.AddressDAO;
-import sk.tera.DAO.Impl.AddressDAOImpl;
 import sk.tera.TestDAO;
+import sk.tera.db.DAO.Impl.AddressDAOImpl;
+import sk.tera.db.Entity.Address;
 
 import javax.transaction.Transactional;
 
 /**
- * Created by leaflock on 30.3.2016.
+ * Unit test class for Address entity. Checking primary DB operations with entity.
+ *
+ * @author z0rk1
  */
 @RunWith(MockitoJUnitRunner.class)
 @Transactional

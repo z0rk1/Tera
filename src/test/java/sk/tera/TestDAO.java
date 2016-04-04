@@ -5,9 +5,9 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 /**
- * Testovaci DAO objekt ktory sa napaja na databazu projektu.
+ * Testing DAO object which connect to testing DB.
  *
- * @author Marek Rebo
+ * @author z0rk1
  */
 public class TestDAO {
 

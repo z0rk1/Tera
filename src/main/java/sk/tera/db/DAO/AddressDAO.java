@@ -1,13 +1,15 @@
-package sk.tera.DAO;
+package sk.tera.db.DAO;
 
-import sk.tera.DAO.Impl.AddressDAOImpl;
-import sk.tera.Address;
+import sk.tera.db.DAO.Impl.AddressDAOImpl;
+import sk.tera.db.Entity.Address;
 
 import javax.ejb.Local;
 import javax.persistence.EntityManager;
 
 /**
- * Created by leaflock on 14.11.2015.
+ * DAO interface for Address entity.
+ *
+ * @author z0rk1
  */
 @Local(AddressDAOImpl.class)
 public interface AddressDAO {

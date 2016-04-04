@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Created by leaflock on 8.12.2015.
+ * @author z0rk1
  */
 @Model
 public class Bean {

@@ -1,7 +1,7 @@
-package sk.tera.DAO.Impl;
+package sk.tera.db.DAO.Impl;
 
-import sk.tera.DAO.AddressDAO;
-import sk.tera.Address;
+import sk.tera.db.DAO.AddressDAO;
+import sk.tera.db.Entity.Address;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateful;
@@ -11,7 +11,9 @@ import javax.persistence.TypedQuery;
 import java.io.IOException;
 
 /**
- * Created by leaflock on 14.11.2015.
+ * Implementation of {@link AddressDAO} interface.
+ *
+ * @author z0rk1
  */
 @Stateful
 @LocalBean

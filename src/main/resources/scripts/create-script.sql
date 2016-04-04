@@ -1,4 +1,4 @@
-﻿/*  Vytvorenie tabulky T_PERSON */
+﻿/*  Create table T_PERSON */
 CREATE TABLE T_PERSON
 (
 	ID 		      SERIAL 		    PRIMARY KEY,
@@ -7,7 +7,7 @@ CREATE TABLE T_PERSON
 	ID_ADDRESS	BIGINT
 );
 
-/* Vytvorenie tabulky T_ADDRESS */
+/* Create table T_ADDRESS */
 CREATE TABLE T_ADDRESS (
 	ID          SERIAL 		    PRIMARY KEY,
 	STREET	    VARCHAR(255) 	NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE T_ADDRESS (
 	ZIP	        VARCHAR(20)   NOT NULL
 );
 
-/* Vytvorenie tabulky T_CONTACT */
+/* Create table T_CONTACT */
 CREATE TABLE T_CONTACT (
 	ID 		      SERIAL 		    PRIMARY KEY,
 	NAME		    VARCHAR(255)	NOT NULL UNIQUE,
@@ -26,7 +26,7 @@ CREATE TABLE T_CONTACT (
 	ID_PERSON 	BIGINT 		    NOT NULL
 );
 
-/* Vytvorenie tabulky T_GROUP */
+/* Create table T_GROUP */
 CREATE TABLE T_GROUP (
 	ID 		        SERIAL 		      PRIMARY KEY,
 	NAME 		      VARCHAR(255)	  NOT NULL UNIQUE,
@@ -34,7 +34,7 @@ CREATE TABLE T_GROUP (
 	DESCRIPTION 	VARCHAR(1000) 	NOT NULL DEFAULT ''
 );
 
-/* Vytvorenie tabulky T_ACCESS */
+/* Create table T_ACCESS */
 CREATE TABLE T_ACCESS (
 	ID 		          SERIAL 	PRIMARY KEY,
 	CREATE_ACCESS   BOOLEAN NOT NULL DEFAULT FALSE,
@@ -43,7 +43,7 @@ CREATE TABLE T_ACCESS (
 	READ_ACCESS	    BOOLEAN NOT NULL DEFAULT FALSE
 );
 
-/* Vytvorenie tabulky T_PERSON_ACCESS */
+/* Create table T_PERSON_ACCESS */
 CREATE TABLE T_PERSON_ACCESS (
 	ID 		      SERIAL 	PRIMARY KEY,
 	ID_PERSON 	BIGINT 	NOT NULL,
@@ -52,7 +52,7 @@ CREATE TABLE T_PERSON_ACCESS (
 	MODIFIED	  DATE
 );
 
-/* Vytvorenie tabulky T_PERSON_GROUP */
+/* Create table T_PERSON_GROUP */
 CREATE TABLE T_PERSON_GROUP (
 	ID 		    SERIAL 	PRIMARY KEY,
 	ID_GROUP 	BIGINT 	NOT NULL,
@@ -62,7 +62,7 @@ CREATE TABLE T_PERSON_GROUP (
 	MODIFIED	DATE
 );
 
-/* Vytvorenie tabulky T_DOCUMENT */
+/* Create table T_DOCUMENT */
 CREATE TABLE T_DOCUMENT (
 	ID 		          SERIAL 		    PRIMARY KEY,
 	ID_AUTHOR	      BIGINT 		    NOT NULL,
@@ -76,14 +76,14 @@ CREATE TABLE T_DOCUMENT (
 	LINK		        VARCHAR(255) 	NOT NULL DEFAULT ''
 );
 
-/* Vytvorenie tabulky T_DOCUMENT_ACCESS */
+/* Create table T_DOCUMENT_ACCESS */
 CREATE TABLE T_DOCUMENT_ACCESS (
       ID 		      SERIAL PRIMARY KEY,
 	ID_DOCUMENT	    BIGINT NOT NULL,
 	ID_ACCESS	      BIGINT NOT NULL
 );
 
-/* Vytvorenie tabulky T_DOCUMENT_TYPE */
+/* Create table T_DOCUMENT_TYPE */
 CREATE TABLE T_DOCUMENT_TYPE (
 	ID 		        SERIAL        PRIMARY KEY,
 	NAME		      VARCHAR(50)   NOT NULL,
@@ -91,7 +91,7 @@ CREATE TABLE T_DOCUMENT_TYPE (
 	DESCRIPTION	  VARCHAR(1000)	NOT NULL DEFAULT ''
 );
 
-/* Vytvorenie tabulky T_DOCUMENT_TYPE_ACCESS */
+/* Create table T_DOCUMENT_TYPE_ACCESS */
 CREATE TABLE T_DOCUMENT_TYPE_ACCESS (
 	ID 			          SERIAL PRIMARY KEY,
 	ID_DOCUMENT_TYPE 	BIGINT NOT NULL,
@@ -100,7 +100,7 @@ CREATE TABLE T_DOCUMENT_TYPE_ACCESS (
 
 -- ---------------------------------------------------------
 --
--- Vytvorenie vezieb medzi tabulkami
+-- Create relationship between of tables
 --
 -- ---------------------------------------------------------
 ALTER TABLE T_PERSON

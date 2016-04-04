@@ -1,7 +1,7 @@
-package sk.tera.DAO.Impl;
+package sk.tera.db.DAO.Impl;
 
-import sk.tera.DAO.PersonDAO;
-import sk.tera.Person;
+import sk.tera.db.DAO.PersonDAO;
+import sk.tera.db.Entity.Person;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateful;
@@ -9,7 +9,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 /**
- * Created by leaflock on 30.3.2016.
+ * Implementation of {@link PersonDAO} interface.
+ *
+ * @author z0rk1
  */
 @Stateful
 @LocalBean

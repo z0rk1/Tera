@@ -1,12 +1,14 @@
-package sk.tera;
+package sk.tera.db.Entity;
 
-import sk.tera.DAO.PersonDAO;
+import sk.tera.db.DAO.PersonDAO;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 /**
- * Created by leaflock on 30.3.2016.
+ * Entity which represent table T_PERSON.
+ *
+ * @author z0rk1
  */
 @Entity
 @Table(name = PersonDAO.TABLE_NAME)
@@ -28,6 +30,7 @@ public class Person implements Serializable {
     @Column(name = PersonDAO.PASSWORD, nullable = false, length = 255)
     private String password;
 
+    @OneToOne
     @Column(name = PersonDAO.ADDRESS)
     private Address address;
 

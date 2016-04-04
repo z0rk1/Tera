@@ -1,7 +1,7 @@
 package sk.tera.DAOTest;
 
 import org.junit.*;
-import sk.tera.Address;
+import sk.tera.db.Entity.Address;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -9,7 +9,9 @@ import javax.persistence.Persistence;
 import java.util.logging.Logger;
 
 /**
- * Created by leaflock on 30.3.2016.
+ * Unit test class for Address entity. Checking primary DB operations with entity.
+ *
+ * @author z0rk1
  */
 public class ClasicAddressTest {
 

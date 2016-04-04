@@ -1,12 +1,14 @@
-package sk.tera.DAO;
+package sk.tera.db.DAO;
 
-import sk.tera.Person;
-import sk.tera.DAO.Impl.PersonDAOImpl;
+import sk.tera.db.DAO.Impl.PersonDAOImpl;
+import sk.tera.db.Entity.Person;
 
 import javax.ejb.Local;
 
 /**
- * Created by leaflock on 30.3.2016.
+ * DAO interface for Person entity.
+ *
+ * @author z0rk1
  */
 @Local(PersonDAOImpl.class)
 public interface PersonDAO {

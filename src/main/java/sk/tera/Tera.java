@@ -1,6 +1,7 @@
 package sk.tera;
 
-import sk.tera.DAO.AddressDAO;
+import sk.tera.db.DAO.AddressDAO;
+import sk.tera.db.Entity.Address;
 import sk.tera.ui.LoginBean;
 
 import javax.ejb.EJB;
@@ -9,7 +10,7 @@ import javax.faces.bean.SessionScoped;
 import javax.inject.Inject;
 
 /**
- * Created by leaflock on 14.11.2015.
+ * @author z0rk1
  */
 @SessionScoped
 @ManagedBean(name = "tera")

@@ -1,7 +1,7 @@
-package sk.tera.DAO.Impl;
+package sk.tera.db.DAO.Impl;
 
-import sk.tera.DAO.GroupDAO;
-import sk.tera.Group;
+import sk.tera.db.DAO.GroupDAO;
+import sk.tera.db.Entity.Group;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateful;
@@ -9,7 +9,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 /**
- * Created by leaflock on 4.3.2016.
+ * Implementation of {@link GroupDAO} interface.
+ *
+ * @author z0rk1
  */
 @Stateful
 @LocalBean

@@ -4,7 +4,9 @@ import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
 /**
- * Created by leaflock on 14.11.2015.
+ * LoginBean
+ *
+ * @author z0rk1
  */
 @Stateless
 @LocalBean

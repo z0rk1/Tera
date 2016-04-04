@@ -1,12 +1,14 @@
-package sk.tera.DAO;
+package sk.tera.db.DAO;
 
-import sk.tera.DAO.Impl.GroupDAOImpl;
-import sk.tera.Group;
+import sk.tera.db.DAO.Impl.GroupDAOImpl;
+import sk.tera.db.Entity.Group;
 
 import javax.ejb.Local;
 
 /**
- * Created by leaflock on 4.3.2016.
+ * DAO interface for Group entity.
+ *
+ * @author z0rk1
  */
 @Local(GroupDAOImpl.class)
 public interface GroupDAO {

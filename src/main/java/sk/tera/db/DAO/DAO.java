@@ -1,11 +1,11 @@
-package sk.tera.DAO;
+package sk.tera.db.DAO;
 
 import javax.persistence.EntityManager;
 
 /**
- * Rozhranie pre pristup EntityManagera pre pracu s databazou.
+ * Interface for access to EntityManager of database.
  *
- * @author Marek Rebo
+ * @author z0rk1
  */
 public interface DAO {
     public EntityManager getEm();

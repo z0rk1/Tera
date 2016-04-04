@@ -1,12 +1,14 @@
-package sk.tera;
+package sk.tera.db.Entity;
 
-import sk.tera.DAO.AddressDAO;
+import sk.tera.db.DAO.AddressDAO;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 /**
- * Created by leaflock on 14.11.2015.
+ * Entity which represent table T_ADDRESS.
+ *
+ * @author z0rk1
  */
 @Entity
 @Table(name = AddressDAO.TABLE_NAME)
