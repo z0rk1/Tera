@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+
+    <persistence-unit name="testDS" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <class>sk.tera.Address</class>
+        <class>sk.tera.Group</class>
+        <class>sk.tera.Person</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect" />
+            <property name="hibernate.connection.url" value="jdbc:hsqldb:mem:unit-testing-jpa" />
+            <property name="hibernate.connection.driver_class" value="org.hsqldb.jdbcDriver" />
+            <property name="hibernate.connection.username" value="sa" />
+            <property name="hibernate.connection.password" value="" />
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+            <property name="hibernate.show_sql" value="false" />
+        </properties>
+    </persistence-unit>
+
+    <!--
+    <persistence-unit name="testDS" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <class>sk.tera.Address</class>
+        <class>sk.tera.Group</class>
+        <class>sk.tera.Person</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect" />
+            <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/tera_db" />
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
+            <property name="hibernate.connection.username" value="leaflock" />
+            <property name="hibernate.connection.password" value="postgresql" />
+            <property name="hibernate.show_sql" value="false" />
+        </properties>
+    </persistence-unit>
+    -->
+</persistence>

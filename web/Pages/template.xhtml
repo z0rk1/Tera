@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xml:lang="en" lang="en">
+
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Tera.sk</title>
+    <h:outputStylesheet name="style.css" library="css" media="screen"/>
+
+    <f:metadata>
+        <ui:insert name="metadata"/>
+    </f:metadata>
+
+</h:head>
+<h:body onload="statusDialog_WV.hide();" styleClass="body">
+    <p:ajaxStatus onstart="statusDialog_WV.show();" onsuccess="statusDialog_WV.hide();"/>
+
+    <h:form id="mainForm" styleClass="main">
+
+        <!--Hlavicka-->
+        <p:panel id="header" styleClass="north">
+            <ui:include src="north.xhtml"/>
+        </p:panel>
+
+        <!--Telo-->
+        <p:panel id="container" style="background-color: yellow; overflow-x: auto; padding: 0;">
+
+            <p:panel styleClass="left">
+                <ui:include src="menu.xhtml"/>
+
+                <p:panel id="content" style="background-color: lightsalmon">
+                    <ui:include src="#{menuBean.path}"/>
+                </p:panel>
+
+            </p:panel>
+
+            <p:panel style="margin-top: 4px !important; width: 200px !important;"  styleClass="right">
+                <p:outputLabel value="EAST"/>
+            </p:panel>
+
+        </p:panel>
+
+        <!--Pata-->
+        <p:panel id="footer" styleClass="south">
+            <ui:include src="south.xhtml"/>
+        </p:panel>
+
+    </h:form>
+
+</h:body>
+</html>

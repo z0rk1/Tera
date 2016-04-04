@@ -1,0 +1,44 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <p:outputPanel style="background-color: lightblue; height: 45px;">
+        <p:commandButton value="#{localize.reports_block_btt}"
+                         title="#{localize.reports_block_btt_tooltip}"
+                         actionListener="#{menuBean.selectMenu}"
+                         update=":mainForm:content"
+                         style="border-radius: 0;"
+                         styleClass="menu-button"
+                         ajax="false">
+            <f:attribute name="menu" value="REPORT" />
+        </p:commandButton>
+        <p:commandButton value="#{localize.lib_block_btt}"
+                         title="#{localize.lib_block_btt_tooltip}"
+                         actionListener="#{menuBean.selectMenu}"
+                         update=":mainForm:content"
+                         style="border-radius: 0;"
+                         styleClass="menu-button"
+                         ajax="false">
+            <f:attribute name="menu" value="LIB" />
+        </p:commandButton>
+        <p:commandButton value="#{localize.insertion_block_btt}"
+                         title="#{localize.insertion_block_btt_tooltip}"
+                         actionListener="#{menuBean.selectMenu}"
+                         update=":mainForm:content"
+                         style="border-radius: 0;"
+                         styleClass="menu-button"
+                         ajax="false">
+            <f:attribute name="menu" value="INZERT" />
+        </p:commandButton>
+        <p:commandButton value="#{localize.galery_block_btt}"
+                         title="#{localize.galery_block_btt_tooltip}"
+                         actionListener="#{menuBean.selectMenu}"
+                         update=":mainForm:content"
+                         style="border-radius: 0;"
+                         styleClass="menu-button"
+                         ajax="false">
+            <f:attribute name="menu" value="GALERY" />
+        </p:commandButton>
+    </p:outputPanel>
+</ui:composition>

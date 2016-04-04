@@ -1,0 +1,173 @@
+.body {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    color: #063307;
+    background-color: #c6f2ae;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* UI componenty */
+
+.ui-layout, .ui-layout-doc, .ui-layout-unit, .ui-layout-wrap, .ui-layout-bd, .ui-layout-hd{
+    border: none;
+}
+
+.ui-panel .ui-panel-content {
+    border-width: 0px;
+    background: none;
+    padding: 0px !important;
+}
+
+/*
+.ui-layout-container {
+    min-height: 100%;
+    height: auto !important;
+    margin: 5px;
+    margin-bottom: -90px;
+}
+*/
+
+/*
+.ui-layout-unit {
+    position: static !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    height: auto !important;
+}
+*/
+
+/*
+.ui-layout-unit-content {
+    display: block !important;
+    height: auto !important;
+}
+*/
+
+/*
+.ui-layout-west {
+    float: left;
+    margin: 5px 0 !important;
+}
+*/
+
+/*
+.ui-layout-center {
+    margin: 5px 0 !important;
+    margin-left: 230px !important;
+    margin-right: 180px !important;
+}
+
+.ui-layout-container:after {
+    height: 85px;
+}
+*/
+
+/*
+.ui-layout-north {
+    position: relative;
+    display: block;
+    top: 200px !important;
+}
+
+.ui-layout-south {
+    position: relative;
+    display: block;
+    bottom: 200px !important;
+}*/
+
+/*
+hr {
+    display: block;
+    border-width: 2px;
+    border: solid #dddddd;
+    border-width: 2px 0 0;
+    clear: both;
+    height: 20;
+    margin: 1.25rem 0 1.1875rem;
+}
+*/
+
+/* Linearne bloky stranky */
+
+/*
+.row {
+    background-color: blue;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 1024px;
+}
+*/
+
+
+/* Moje komponenty */
+
+
+/* MainForm formular */
+.main {
+    width: 1220px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+/* Centrovanie blokov [ header, content, footer ] */
+/*
+.defaultW {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+*/
+
+/* Hlavicka stranky */
+.north {
+    border-width: 0px;
+    background-color: greenyellow ;
+    height: 250px;
+    width: 1220px;
+}
+
+/* Pata stranky */
+.south {
+    border-width: 0px;
+    background-color: palegreen;
+    height: 100px;
+    width: 1220px;
+}
+
+/* Lavy frame stranky */
+.left {
+    float: left;
+    width: 1000px;
+    height: 200%;
+    border: 0 !important;
+    background: none;
+}
+
+/* Pravy frame stranky */
+.right {
+    float: left;
+    background-color: violet;
+}
+
+.menu-button {
+    width: 125px;
+    height: 45px;
+    border: 1px;
+    margin: 0px 0px 0px 3px;
+}
+
+/*
+#login {
+    width: 250px;
+    background-color: yellow;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+*/
