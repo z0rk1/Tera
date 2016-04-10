@@ -18,6 +18,11 @@ public interface GroupDAO {
     public static final String VALUE = "VALUE";
     public static final String DESCRIPTION = "DESCRIPTION";
 
+    public Long add(Group group) throws Exception;
+    public Long update(Group group) throws Exception;
+    public Long delete(Long id) throws Exception;
+    public Long delete(Group group) throws Exception;
+
     public Group getGroupById(Long id) throws Exception;
     public Group findGroupById(Long id) throws Exception;
 }

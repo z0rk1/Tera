@@ -30,7 +30,8 @@ public class Person implements Serializable {
     @Column(name = PersonDAO.PASSWORD, nullable = false, length = 255)
     private String password;
 
-    @OneToOne
+//    @OneToOne
+    @Transient
     @Column(name = PersonDAO.ADDRESS)
     private Address address;
 

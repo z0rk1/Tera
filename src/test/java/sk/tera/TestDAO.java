@@ -11,11 +11,14 @@ import javax.persistence.Persistence;
  */
 public class TestDAO {
 
-    private EntityManagerFactory emf;
+    private static EntityManagerFactory emf;
     private EntityManager em;
 
+//    @PersistenceUnit(name = "testDS")
+//    private EntityManager em;
+
     public TestDAO() {
-        emf= Persistence.createEntityManagerFactory("testDS");
+        emf = Persistence.createEntityManagerFactory("testDS");
         em = emf.createEntityManager();
     }
 

@@ -3,6 +3,7 @@ package sk.tera.db.Entity;
 import sk.tera.db.DAO.GroupDAO;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 
 /**
@@ -12,6 +13,10 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = GroupDAO.TABLE_NAME)
+@NamedQueries({
+        @NamedQuery(name = "GROUP_FIND_ALL", query = "SELECT g FROM Group g"),
+        @NamedQuery(name = "GROUP_TOTAL_COUNT", query = "SELECT COUNT(g.id) FROM Group g")
+})
 public class Group implements Serializable {
 
     /**
@@ -24,9 +29,11 @@ public class Group implements Serializable {
     @Column(name = GroupDAO.ID, nullable = false, unique = true, updatable = false)
     private Long id;
 
+    @Size(min = 1)
     @Column(name = GroupDAO.NAME, nullable = false, unique = true, length = 255)
     private String name;
 
+    @Size(min = 1)
     @Column(name = GroupDAO.VALUE, nullable = false, unique = true, length = 255)
     private String value;
 

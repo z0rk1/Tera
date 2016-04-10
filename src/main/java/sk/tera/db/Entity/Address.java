@@ -3,6 +3,7 @@ package sk.tera.db.Entity;
 import sk.tera.db.DAO.AddressDAO;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 
 /**
@@ -12,6 +13,10 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = AddressDAO.TABLE_NAME)
+@NamedQueries({
+        @NamedQuery(name = "ADDRESS_FIND_ALL", query = "SELECT a FROM Address a"),
+        @NamedQuery(name = "ADDRESS_TOTAL_COUNT", query = "SELECT COUNT(a.id) FROM Address a")
+})
 public class Address implements Serializable {
 
     /**
@@ -24,15 +29,19 @@ public class Address implements Serializable {
     @Column(name = AddressDAO.ID, nullable = false, unique = true, updatable = false)
     private Long id;
 
+    @Size(min = 1)
     @Column(name = AddressDAO.STREET, length = 255, nullable = false)
     private String street;
 
+    @Size(min = 1)
     @Column(name = AddressDAO.TOWN, length = 255, nullable = false)
     private String town;
 
+    @Size(min = 1)
     @Column(name = AddressDAO.STATE, length = 255, nullable = false)
     private String state;
 
+    @Size(min = 1)
     @Column(name = AddressDAO.ZIP, length = 20, nullable = false)
     private String zip;
 
@@ -93,7 +102,7 @@ public class Address implements Serializable {
 
     @Override
     public int hashCode() {
-        int result = getId().hashCode();
+        int result = getId() != null ? getId().hashCode() : 0;
         result = 31 * result + (getStreet() != null ? getStreet().hashCode() : 0);
         result = 31 * result + (getTown() != null ? getTown().hashCode() : 0);
         result = 31 * result + (getState() != null ? getState().hashCode() : 0);

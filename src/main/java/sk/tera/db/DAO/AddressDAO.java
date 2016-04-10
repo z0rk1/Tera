@@ -4,7 +4,6 @@ import sk.tera.db.DAO.Impl.AddressDAOImpl;
 import sk.tera.db.Entity.Address;
 
 import javax.ejb.Local;
-import javax.persistence.EntityManager;
 
 /**
  * DAO interface for Address entity.
@@ -20,13 +19,11 @@ public interface AddressDAO {
     public static final String STATE = "STATE";
     public static final String ZIP = "ZIP";
 
-    public Address getAddressById(Long id) throws Exception;
-    public Address findAddressById(Long id) throws Exception;
     public Long add(Address address) throws Exception;
     public Long update(Address address) throws Exception;
     public Long delete(Long id) throws Exception;
     public Long delete(Address address) throws Exception;
 
-    public void setEm(EntityManager em);
-    public EntityManager getEm();
+    public Address getAddressById(Long id) throws Exception;
+    public Address findAddressById(Long id) throws Exception;
 }
